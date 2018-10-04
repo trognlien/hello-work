@@ -1,0 +1,32 @@
+To add, commit, and then push file to repository
+--------------------------------------------------
+git pull
+git add myfile   (puts file in staging area even if it exists)
+git status
+git commit -m "Fixed myfile"  (-m adds the message in quotes; no need to list changed files)
+git status
+git push
+
+To retrieve the latest files from the repository
+---------------------------------------------------
+git pull
+
+The git reference manual is available at:
+
+http://gitref.org/
+
+
+For the ESL proposal:
+----------------------
+https://github.com/gafusion/ESL
+
+Step 1 will be to set up ssh keys and try to clone the repository via:
+
+$ git clone git@github.com:gafusion/ESL.git
+
+
+
+
+
+
+
