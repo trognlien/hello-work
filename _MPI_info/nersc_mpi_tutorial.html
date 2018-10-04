@@ -1,0 +1,714 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+	
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="nersc_mpi_tutorial_files/main.css">
+<link rel="stylesheet" type="text/css" media="screen,print" href="nersc_mpi_tutorial_files/nav.css">
+<link rel="stylesheet" type="text/css" media="screen,print" href="nersc_mpi_tutorial_files/categories.css">
+<link rel="alternate stylesheet" type="text/css" media="screen" href="nersc_mpi_tutorial_files/main_large.css" title="Large Text">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NERSC MPI Tutorial</title>
+
+</head><body>
+	<p style="clear: both;"></p>
+<form name="gs" action="http://search.nersc.gov/search" method="get">
+        <input name="btnG" value="Google Search" type="hidden">
+        <input name="access" value="p" type="hidden">
+        <input name="entqr" value="0" type="hidden">
+        <input name="ud" value="1" type="hidden">
+        <input name="sort" value="date%3AD%3AL%3Ad1" type="hidden">
+        <input name="ie" value="UTF-8" type="hidden">
+        <input name="oe" value="UTF-8" type="hidden">
+        <input name="site" value="default_collection" type="hidden">
+        <input name="output" value="xml_no_dtd" type="hidden">
+        <input name="client" value="default_frontend" type="hidden">
+        <input name="proxystylesheet" value="default_frontend" type="hidden">
+
+
+	<table width="100%">
+	<tbody><tr><td class="hleft" style="width: 140px;" rowspan="2">
+
+	<a href="http://www.nersc.gov/" target="_top"><img src="nersc_mpi_tutorial_files/nlogo.gif" alt="NERSC logo" width="130"></a>
+	</td><td colspan="2" class="hleft" style="vertical-align: bottom;">
+	<span class="toptitle">National Energy Research Scientific Computing Center</span>
+	</td></tr> 
+	<tr><td class="hleft" style="vertical-align: top;"><span class="toplinks">
+	<a href="http://www.sc.doe.gov/" target="_top">&nbsp;&nbsp;A DOE Office of Science</a>
+		User Facility
+	<br>
+	<a href="http://www.lbl.gov/" target="_top">&nbsp;&nbsp;at Lawrence Berkeley National	
+		Laboratory</a>
+	</span>
+	</td>
+	<td class="go_search" style="vertical-align: bottom;">
+<a href="http://www.nersc.gov/nusers/help/sitemap.php">Site Map</a>
+|
+<a href="http://www.nersc.gov/nusers/help/">Help</a>
+|
+<a href="http://search.nersc.gov/">Search</a>
+<input style="background-color: rgb(230, 230, 230);" name="q" size="16" type="text">
+<input value="Go" style="background-color: rgb(255, 215, 0); font-weight: bold; font-variant: small-caps; font-size: smaller;" type="submit">
+	<br>
+	<a href="https://secure.nersc.gov/nusers/auth/" target="_top">Login</a>
+	</td>
+	</tr>
+	</tbody></table>
+<table class="navbar" cellspacing="0" width="100%"> <tbody><tr>
+<th class="home"><a href="http://www.nersc.gov/" target="_top">Home</a></th>
+<th class="about"><a href="http://www.nersc.gov/about/" target="_top">About</a></th>
+<th class="news"><a href="http://www.nersc.gov/news/" target="_top">News &amp; Media</a></th>
+<th class="nusers"><a href="http://www.nersc.gov/nusers/systems/" target="_top">Systems</a></th>
+<th class="nusers"><a href="http://www.nersc.gov/nusers/" target="_top">Support &amp; Services</a></th>
+<th class="projects"><a href="http://www.nersc.gov/projects/" target="_top">Science &amp; Tech</a></th>
+</tr> 
+</tbody></table>
+</form>
+<div class="page">
+<a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/print.php?hasindex=true">Restore navigation column</a>
+<div class="content">
+<a href="http://www.nersc.gov/nusers/help/tutorials/">NERSC Tutorials</a><h1>Introduction to MPI</h1>
+
+<p>
+This tutorial is intended to be used as a basic introduction
+to parallel programming on the NERSC parallel machines.
+It introduces a number of concepts and the MPI
+message passing library. 
+</p>
+<p>
+This tutorial assumes that you are familiar with FORTRAN or C, basic
+UNIX commands, and a UNIX text editor. 
+</p>
+<p>
+ Access to the examples can be gained with the following commands 
+on the SP:
+</p>
+<div class="terminal"><pre>% <kbd>module load training</kbd>
+% <kbd>cd $EXAMPLES/mpi/intro</kbd>
+</pre></div>
+
+<dl>
+
+<dt><a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/basic.php">Basic Concepts</a></dt>
+<dd>Introduces basic concepts of using MPI and
+passing simple messages. </dd> 
+
+<dt><a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/init.php">Initialization</a></dt>
+<dd>Initializing the library. </dd> 
+
+<dt><a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/types.php">Data Types</a></dt>
+<dd> Mapping MPI datatypes to machine data types. </dd> 
+
+<dt><a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/send.php">Basic Send</a></dt>
+<dd> Moving data to another task. </dd> 
+
+<dt><a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/receive.php">Basic Receive</a></dt>
+<dd> Moving data from another task. </dd> 
+
+<dt><a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/bcast.php">Broadcast</a></dt>
+<dd>
+Sending data from one processor to all others.
+</dd>
+
+<dt><a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/reduce.php">Reduction</a></dt>
+<dd>
+How to get data from all other processors.
+</dd>
+
+<dt><a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/example.php">Example</a></dt>
+<dd>A small example using broadcast and reduction routines.
+</dd>
+
+</dl>
+
+ <h2>Related information</h2>
+
+
+<ul>
+<li><a href="http://www.nersc.gov/nusers/resources/software/libs/mpi/">MPI Resources</a>
+	</li>
+<li><a href="http://www.llnl.gov/computing/tutorials/workshops/workshop/mpi/MAIN.html">LLNL MPI Tutorial</a>
+	</li>
+</ul>
+
+<!-- END PAGE CONTENT -->
+<!--#include virtual="/cgi-hpcf/HTMLfooter" -->
+<h1>Basic Concepts</h1>
+<p>
+Franklin, Bassi, and Jacquard are mixed <em>distributed memory</em> and
+<em>shared memory</em> machines. Each <em>node</em> consists of
+multiple main processing <em>cores</em> (8 on Bassi, 4 on Franklin and 2 on Jacquard) that
+have direct access to a single node's pool of memory. Each node
+has its own memory and does not have direct access to the memory
+on other nodes. 
+</p>
+<p>
+Fortran, C, and C++  provide no mechanism for directly accessing or 
+sharing memory that resides on
+different nodes. If a program needs data that is stored
+on another node,
+the programmer must incorporate subroutines calls from
+a library of message passing routines to get that data.
+The most common portable message passing library is
+called the <em>Message Passing Interface</em> or <em>MPI.</em>
+MPI is a standard that allows you to send data from one 
+node to another.  MPI also allows you to communicate among 
+MPI tasks, whether they are executing on the same node or not. 
+</p>
+<p>
+While a single node does have multiple cores, most codes
+still use MPI calls to transfer data between all processors, even
+those on the same node. In many cases compilers and operating systems will
+recognize when MPI is communicating on-node 
+and will substitute faster shared-memory constructs where appropriate.
+</p>
+<p>
+In the following, well use the term <em>task</em> and <em>process</em>
+rather interchangeably to refer to the independent, parallel execution of code.
+You can
+have a number of MPI tasks less than or equal to the number of cores 
+on the node. (If you are writing a hybrid code, e.g. using OpenMP and MPI,
+each MPI task can have a number of associated <em>threads</em>.) 
+</p>
+[<a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/init.php">NEXT: Initialization</a>]
+ <h1>Initialization</h1>
+
+<p>
+
+To use the MPI library you must include 
+<em>header files</em> which contain definitions and
+declarations
+that are needed by the MPI library routines.
+In Fortran 90 you can use the <tt>mpi</tt> module.
+The following line must appear at the top of any source
+code file that will make an MPI call. 
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre> INCLUDE 'mpif.h'
+</pre></div>
+Fortran 90 codes should use instead:
+<div class="code"><pre> USE mpi 
+</pre></div>
+<h3>C/C++:</h3>
+<div class="code"><pre> #include "mpi.h"
+</pre></div>
+<h2>MPI_Init</h2>
+<p>
+The first MPI call must be <tt>MPI_INIT</tt>, which initializes the
+message passing routines, for example:
+</p>
+<h3>Fortran:</h3>
+<div class="code"><pre>INTEGER:: <var>ierr</var>
+
+CALL MPI_INIT(<var>ierr</var>) 
+</pre></div>
+<p>
+where <var>ierr</var> is an integer which holds an   error code when
+the call returns.
+</p>
+<p>
+<strong>NOTE:</strong> The value of <var>ierr</var> is really of little use  
+since, by default,
+MPI aborts the program when it encounters an error. 
+However, <var>ierr</var> must be included with MPI calls anyway. 
+</p>
+<h3>C</h3>
+<div class="code"><pre>int MPI_Init( int *argc, char ***argv)
+</pre></div>
+<p>
+where <code>argc</code> and <code>argv</code> are the arguments
+passed to <tt>main</tt>. MPI does not use these arguments in 
+any way, however, and in MPI-2 implementations, <tt>NULL</tt> may
+be passed instead.
+</p>
+<h2>MPI_Finalize</h2>
+
+<p>
+When you are finished passing messages, you
+must close out the MPI routines. Often this is the last thing done in a program.
+The syntax for this finalization is
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre>       CALL MPI_FINALIZE(ierr)
+</pre></div>
+<h3>C</h3>
+<div class="code"><pre>int MPI_Finalize(void)
+</pre></div>
+<h2>Inquiry routines</h2>
+<p>
+Two other MPI calls are usually made soon after initialization.
+They are 
+</p>
+<dl>
+<dt><code><strong>MPI_COMM_SIZE()</strong></code></dt>
+<dd> <p>
+<code><strong>MPI_COMM_SIZE</strong></code> is used to find the number of tasks
+in a specified
+MPI <em>communicator</em>.  In MPI, you can divide your total number
+of tasks into groups, called <em>communicators</em>. 
+In this tutorial we will only refer to the <em>communicator</em>
+that includes all MPI processes: <code>MPI_COMM_WORLD</code>.
+</p>
+<p>
+The format for <code><strong>MPI_COMM_SIZE</strong></code> is as follows:
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre>INTEGER:: totTasks, ierr
+
+CALL MPI_COMM_SIZE( MPI_COMM_WORLD, totTasks, ierr )
+</pre></div>
+<h3>C</h3>
+<div class="code"><pre>int MPI_Comm_size( MPI_COMM_WORLD, int *totTasks )
+</pre></div>
+<p>
+where the total number of tasks in <code><strong>MPI_COMM_WORLD</strong></code>
+is returned in the variable <var>totTasks</var> and 
+<var>ierr</var> returns an error code.
+</p>
+</dd>
+<dt><code><strong>MPI_COMM_RANK()</strong></code></dt>
+<dd><p>
+<code><strong>MPI_COMM_RANK</strong></code> is used to find the rank (the name or identifier) 
+of the tasks running the code.  Each task in a communicator is 
+assigned an identifying number from 0 to <var>totTasks-1</var>. 
+  The format for the call is as follows:
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre>INTEGER:: task_id, ierr
+
+CALL MPI_COMM_RANK( MPI_COMM_WORLD, task_id, ierr )
+</pre></div>
+<h3>C</h3>
+<div class="code"><pre>int MPI_Comm_rank( MPI_COMM_WORLD, int *task_id )
+</pre></div>
+<p>
+where <var>task_id</var> is an integer that identifies
+the task.
+</p> </dd>
+</dl>
+<h2>Example</h2>
+<p>
+This example, 
+<a href='javascript:var%20sw=window.open("hello.f90.html","sourceWin","directories=no,location=no,menubar=no,personalbar=no,resizable=yes,scrollbars=yes,toolbar=no,width=600,height=600");'>hello.f90</a>,
+<a href='javascript:var%20sw=window.open("hello.c.html","sourceWin","directories=no,location=no,menubar=no,personalbar=no,resizable=yes,scrollbars=yes,toolbar=no,width=600,height=600");'>hello.c</a>,
+
+available in $EXAMPLES/mpi/intro/hello
+demonstrates these calls. 
+</p>
+<p>
+If we compile (you can type "make" to compile if you are using the
+example code) and run this code on <em>franklin</em>, we get
+</p>
+<div class="terminal"><pre>franklin% <kbd>ftn -o hello hello.f90</kbd>
+franklin% <kbd>qsub -I -lmppwidth=4</kbd>
+franklin% <kbd>cd $PBS_O_WORKDIR</kbd>
+franklin% <kbd>aprun -n 4 ./hello </kbd>
+ task_no is  3  of total  4  tasks
+ task_no is  1  of total  4  tasks
+ task_no is  0  of total  4  tasks
+ task_no is  2  of total  4  tasks
+</pre></div>
+<!-- END PAGE CONTENT -->
+<!--#include virtual="/cgi-hpcf/HTMLfooter" -->
+<!--#include virtual="/cgi-hpcf/HTMLheader?title=NERSC MPI Tutorial" -->
+<!-- BEGIN PAGE CONTENT -->
+<h1>Data types</h1>
+
+<p>
+One argument that usually must be given to MPI routines is
+the <em>type</em> of the data being passed. 
+User-defined datatypes (an advanced MPI topic)
+allows MPI to automatically scatter and gather data to and from
+non-contiguous buffers.
+MPI defines a number of constants that correspond to language
+datatypes in Fortran and C.
+</p>
+<p>
+When an MPI routine is called, the Fortran data type of  the data being
+passed must match the corresponding MPI integer constant. The following
+table the MPI 1.2 datatype definitions. 
+</p>
+<pre>Type 			Length
+--------------- 	------
+MPI_PACKED 		1
+MPI_BYTE 		1
+MPI_CHAR 		1
+MPI_UNSIGNED_CHAR 	1
+MPI_SIGNED_CHAR 	1
+MPI_WCHAR 		2
+MPI_SHORT 		2
+MPI_UNSIGNED_SHORT 	2
+MPI_INT 		4
+MPI_UNSIGNED 		4
+MPI_LONG 		4
+MPI_UNSIGNED_LONG 	4
+MPI_FLOAT 		4
+MPI_DOUBLE 		8
+MPI_LONG_DOUBLE 	16
+MPI_CHARACTER 		1
+MPI_LOGICAL 		4
+MPI_INTEGER 		4
+MPI_REAL 		4
+MPI_DOUBLE_PRECISION 	8
+MPI_COMPLEX 		2*4
+MPI_DOUBLE_COMPLEX 	2*8
+
+Optional Type 		Length
+------------------ 	------
+MPI_INTEGER1 		1
+MPI_INTEGER2 		2
+MPI_INTEGER4 		4
+MPI_INTEGER8 		8
+MPI_LONG_LONG 		8
+MPI_UNSIGNED_LONG_LONG 	8
+MPI_REAL4 		4
+MPI_REAL8 		8
+MPI_REAL16 		16
+</pre>
+<!--#include virtual="/cgi-hpcf/HTMLheader?title=NERSC MPI Tutorial" -->
+<!-- BEGIN PAGE CONTENT -->
+ <h1>Basic send</h1>
+<p>
+We're ready to do some message passing.  We'll start with the most basic
+send routine, <code><strong>MPI_SEND</strong></code>.  The function call looks like this:
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre>FORTRAN_TYPE::  buff
+INTEGER:: count, dest, ierr
+
+CALL MPI_SEND(buff, count, MPI_TYPE, dest, tag, comm, ierr)
+</pre></div>
+<h3>C</h3>
+<div class="code"><pre>int MPI_Send(void *buf, int count, MPI_Datatype datatype, int dest,
+	int tag, MPI_Comm comm)
+</pre></div>
+<p>
+This single command allows the passing of any kind of variable, 
+even a large array,
+ to any
+group of tasks.  We'll break it down into
+variables:
+</p>
+<ul>
+<li><var>buff</var> : The variable you want to send.
+	</li>
+<li><var>count</var> : The number of variables you're passing.  If you're
+passing only a single value, this should be <code><strong>1</strong></code>.  If you're passing an
+array, it's the overall size of the array.  For example, if you wanted to 
+send a 4 by 5 array, count would be 4*5=20 since you're actually passing
+20 values.
+	</li>
+<li><var>MPI_TYPE</var> : 
+The kind of variable you're passing so the MPI routine knows what to expect.
+	</li>
+<li><var>dest</var> : The ID number of the task you're sending the message to.
+	</li>
+<li><var>tag</var> : a message tag.  This is a way for the receiver
+to verify that it's getting the message it expects.  The message tag is
+an integer number that you can assign any value.
+	</li>
+<li><var>comm</var> : This is the group ID of tasks that your message
+is going to.  In large, complex programs tasks may be divided into
+groups to speed connections and transfers. 
+In small programs, this will more than likely be MPI_COMM_WORLD.
+	</li>
+<li><var>ierr</var> : an integer error code.
+	</li>
+</ul>
+
+
+<!-- END PAGE CONTENT -->
+<!--#include virtual="/cgi-hpcf/HTMLfooter" -->
+<!--#include virtual="/cgi-hpcf/HTMLheader?title=NERSC MPI Tutorial" -->
+<!-- BEGIN PAGE CONTENT -->
+ <h1>Basic Receive</h1>
+
+<p>
+Once you've sent a message, you must receive it on another
+task.
+The
+<code><strong>MPI_RECV</strong></code>  call is similar to the send call.
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre>FORTRAN_TYPE::  rbuf
+INTEGER:: count, source, tag, status(MPI_STATUS_SIZE), ierr
+
+CALL MPI_RECV(rbuf, count, MPI_TYPE, source, tag, comm, status, ierr)
+</pre></div>
+<h3>C</h3>
+<div class="code"><pre>int MPI_Recv( void *rbuf, int count, MPI_Datatype datatype, int source,
+	int tag, MPI_Comm comm, MPI_Status *status )
+</pre></div>
+<p>
+The arguments that are different from those in <a href="http://www.nersc.gov/nusers/help/tutorials/mpi/intro/send.php"><code><strong>MPI_SEND</strong></code></a> are 
+</p>
+<ul>
+<li><var>rbuf</var> : This is the name
+of the variable where you'll be storing the received data.
+	</li>
+<li><var>source</var> : This replaces the destination in the send command.
+This is the return ID of the sender.
+	</li>
+<li><var>status</var> : You can check this variable to see if the receive was completed.
+	</li>
+</ul>
+
+
+ <h2> Example: simple send and receive</h2>
+<p>
+This example, <a href='javascript:var%20sw=window.open("pingpong.f90.html","sourceWin","directories=no,location=no,menubar=no,personalbar=no,resizable=yes,scrollbars=yes,toolbar=no");'>pingpong.f90</a>,
+available in $EXAMPLES/mpi/intro/simple,
+demonstrates these calls.
+</p>
+
+<p>
+If we compile and run 
+</p>
+<div class="terminal"><pre>franklin% <kbd>ftn -o pingpong pingpong.f90</kbd>
+</pre></div>
+<p>
+the output looks like this:
+</p>
+<div class="terminal"><pre>franklin% <kbd>qsun -I -lmppwidth=2</kbd>
+franklin% <kbd>cd $PBS_O_WORKDIR</kbd>
+franklin% <kbd>aprun -n 2 ./pingpong </kbd>
+   0: TASK # 0  sent  0
+   0: TASK # 0  received  1
+   1: TASK # 1  sent  1
+   1: TASK # 1  received  0
+</pre></div>
+<!-- END PAGE CONTENT -->
+<!--#include virtual="/cgi-hpcf/HTMLfooter" -->
+<h1>Broadcast</h1>
+
+<p>
+Often you will have data on one processor that it needs to 
+share with all other processors. You accomplish this
+by using 
+a <em>broadcast,</em> which sends data to a group of processes.
+The MPI routine <code><strong>MPI_BCAST()</strong></code> transfers 
+data from one task to a group of others.  The 
+format is:
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre>FORTRAN_TYPE:: buff
+INTEGER:: count, root, ierr
+
+CALL MPI_BCAST(buff, count, MPI_TYPE, root, comm, ierr)
+</pre></div>
+<h3>C</h3>
+<div class="code"><pre>int MPI_Bcast( void *buff, int count, MPI_Datatype datatype, int root,
+	MPI_Comm comm)
+</pre></div>
+<p>
+where the variables are the same as before, except 
+</p>
+<ul>
+<li>FORTRAN_TYPE : is to be replaced with the Fortran data type 
+	of the variable being passed, 
+	e.g. <code><strong>REAL</strong></code> and <code><strong>INTEGER</strong></code>.
+	</li>
+<li>MPI_TYPE : is to be replaced with the <em>MPI type</em>
+of the data being passed, 
+	e.g. <code><strong> MPI_REAL</strong></code> and <code><strong>MPI_INTEGER</strong></code> .
+	</li>
+<li><var>buff</var> : the variable name of the data being broadcast. When
+	the call returns, all tasks will have the same value placed in
+	<var>buff</var>
+	</li>
+<li><var>root</var> : This is the
+task which has the value to be shared with all the others. In other words,
+if <var>buff</var>=10 on task 3, setting <var>root</var>=3 will cause
+the call to <code><strong>MPI_BCAST</strong></code> to set <var>buff</var>=10 on all
+the tasks.
+	</li>
+</ul>
+<h2>Example</h2>
+<p>
+This sample program, 
+<a href='javascript:var%20sw=window.open("bcast.f90.html","sourceWin","directories=no,location=no,menubar=no,personalbar=no,resizable=yes,scrollbars=yes,toolbar=no");'>bcast.f90</a>
+is available in 
+$EXAMPLES/mpi/intro/bcast/. The program
+has task 0 calculate a value for the variable
+<var>rsq</var> and then broadcast that value to
+all the other tasks. Each task then prints out the
+value, thus verifying the broadcast.
+</p>
+<p>
+If we compile and run, we get these results
+</p>
+<div class="terminal"><pre>franklin% <kbd>ftn -o bcast  bcast.f90</kbd>
+franklin% <kbd>qsub -I -lmppwidth=8</kbd>
+frnaklin% <kbd>cd $PBS_O_WORKDIR</kbd>
+franklin% <kbd>aprun -n 8 ./bcast </kbd>
+ TASK # 0  has rsq=  27.562500
+ TASK # 1  has rsq=  27.562500
+ TASK # 2  has rsq=  27.562500
+ TASK # 3  has rsq=  27.562500
+ TASK # 4  has rsq=  27.562500
+ TASK # 5  has rsq=  27.562500
+ TASK # 6  has rsq=  27.562500
+ TASK # 7  has rsq=  27.562500
+</pre></div>
+<p>
+Each task ends up with the same value of
+the variable <var>rsq</var>. 
+</p>
+<!--#include virtual="/cgi-hpcf/HTMLheader?title=NERSC MPI Tutorial" -->
+<!-- BEGIN PAGE CONTENT -->
+<h1>Reduction</h1>
+<p>
+Often you will have calculated some quantity or quantities
+on many processors and you will need to  collect or
+reduce that data onto one or all processors. 
+MPI provides routines to perform these <em>reductions.</em>
+</p>
+ <h2>One Collector</h2>
+<p>
+If each task in your job has calculated a private value for some
+variable, <var>var</var>, with the same name on all tasks,
+the <code><strong>MPI_REDUCE</strong></code> routine will <em>reduce</em> all
+those values, according to some operation, and store the
+result in a variable on one task. The syntax is 
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre>FORTRAN_TYPE:: sendbuf, recbuf
+INTEGER:: count, root, ierr
+
+CALL MPI_REDUCE(sendbuf, recbuf, count, &amp;
+		MPI_TYPE, MPI_OP,  root, comm, ierr)
+</pre></div>
+<h3>C</h3>
+<div class="code"><pre>int MPI_Reduce( void *sendbuf, void *recbuf, int count, 
+	MPI_Datatype datatype, MPI_Op op, int root, MPI_Comm comm)
+</pre></div>
+<p>
+where
+</p>
+<ul>
+<li><var>sendbuf</var> : the variable to be collected from all tasks.
+	</li>
+<li><var>recbuf</var> : the variable where the result of operating
+MPI_OP on all those values will be placed 
+	</li>
+<li><var>MPI_OP</var> : one of a number of functions to be performed on the 
+values being collected. 
+	</li>
+<li><var>root</var> : the only task that will collect the result of the reduce
+command in <var>recbuf</var>.  
+	</li>
+</ul>
+<p>
+Possible values for MPI_OP are:
+</p>
+<table class="ntable"> 
+<tbody><tr>
+	<th>MPI Name</th>
+	<th>Operation</th>
+</tr>
+<tr>
+	<td>MPI_MAX</td>
+	<td>Maximum</td>
+</tr>
+<tr><td>MPI_MIN</td>
+<td>Minimum</td></tr>
+<tr><td>MPI_PROD</td>
+<td>Product</td></tr>
+<tr><td>MPI_SUM</td>
+<td>Sum</td></tr>
+<tr><td>MPI_LAND</td>
+<td>Logical AND</td></tr>
+<tr><td>MPI_LOR</td>
+<td>Logical OR</td></tr>
+<tr><td>MPI_LXOR</td>
+<td>Logical EXCLUSIVE OR</td></tr>
+<tr><td>MPI_BAND</td>
+<td>Bitwise AND</td></tr>
+<tr><td>MPI_BOR</td>
+<td>Bitwise OR</td></tr>
+<tr><td>MPI_BXOR</td>
+<td>Bitwise EXCLUSIVE OR</td></tr>
+<tr><td>MPI_MAXLOC</td>
+<td>Maximum value and location</td></tr>
+<tr><td>MPI_MINLOC</td>
+<td>Minimum value and location</td></tr>
+</tbody></table>
+
+<h2>Everyone Collects</h2>
+
+<p>
+You may wish to have the reduction available to all tasks.
+The routine <code><strong>MPI_ALLREDUCE</strong></code> performs that function.
+It's almost the same as the basic reduce command:
+</p>
+<h3>Fortran</h3>
+<div class="code"><pre>FORTRAN_TYPE:: sendbuf, recbuf
+INTEGER:: count, ierr
+
+CALL MPI_ALLREDUCE(sendbuf, recbuf, count, MPI_TYPE, MPI_OP, comm, ierr)
+</pre></div>
+<h2>C</h2>
+<div class="code"><pre>int MPI_Allreduce( void *sendbuf, void *recbuf,  int count,
+	MPI_Datatype datatype, MPI_Op op, MPI_Comm comm )
+</pre></div>
+<p>
+The only difference between this call and <code><strong>MPI_REDUCE</strong></code> 
+is the lack of a root task in the call statement.  
+</p>
+<!-- END PAGE CONTENT -->
+<!--#include virtual="/cgi-hpcf/HTMLfooter" -->
+<a name="example"></a>
+<h1>Example</h1>
+
+<p>
+We'll put together things we've learned into an
+example program. This program uses collective
+operations to broadcast a value to all tasks and
+gather results from all tasks to task 0. 
+</p>
+<p>
+This example, <a href='javascript:var%20sw=window.open("flip.f90.html","sourceWin","directories=no,location=no,menubar=no,personalbar=no,resizable=yes,scrollbars=yes,toolbar=no");'>flip.f90</a>,
+available in $EXAMPLES/MPI_intro/flip,
+demonstrates these calls. 
+</p>
+<p>
+If we compile and run on the SP, we get
+</p>
+<div class="terminal"><pre>seaborg% <kbd>mpxlf90 -o flip -qsuffix=f=f90 flip.f90</kbd>
+1501-510  Compilation successful for file flip.f90
+seaborg% <kbd>poe ./flip -procs 8 -nodes 1 </kbd> 
+subfilter: default repo mpccc will be charged
+ Flipping coin  1000000  times on each task.
+ Processor  1  got  499614  heads.
+ Processor  0  got  499493  heads.
+ Processor  3  got  500017  heads.
+ Processor  2  got  500595  heads.
+ Processor  5  got  499306  heads.
+ Processor  4  got  499778  heads.
+ Processor  6  got  500008  heads.
+ Processor  7  got  500830  heads.
+ Heads came up  49.99551392  percent of the time.
+</pre></div>
+
+<!--stopindex-->
+<hr>
+<div class="navinfo">
+<a href="http://www.lbl.gov/CS/">Computing Sciences</a> | 
+<a href="http://crd.lbl.gov/">Computational Research Division</a> |
+<a href="http://www.es.net/">ESnet</a> 
+</div>
+<table width="100%"><tbody><tr>
+<td align="left"><a href="http://www.lbl.gov/"><img src="nersc_mpi_tutorial_files/lbl1.gif" alt="LBNL Home" border="0" height="50"></a></td>
+<td class="footerinfo">
+<br>
+Page last modified: Mon, 11 Jan 2010 21:29:11 GMT<br>Page URL: http://www.nersc.gov/nusers/help/tutorials/mpi/intro/print.php<br>Web contact: <a href="mailto:webmaster@nersc.gov">webmaster@nersc.gov</a> 
+<br>Computing questions: <a href="mailto:consult@nersc.gov">consult@nersc.gov</a> 
+<br>
+
+<br><a href="http://www.lbl.gov/Disclaimers.html">Privacy and Security Notice</a>
+</td>
+<td align="right"><a href="http://www.sc.doe.gov/"><img src="nersc_mpi_tutorial_files/DOE_Office_Science_sm.jpg" alt="DOE Office of Science" border="0"></a></td>
+</tr>
+</tbody></table>
+
+
+</div></div></body></html>

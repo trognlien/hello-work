@@ -1,0 +1,190 @@
+.home {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+}
+table.navbar th {
+	width:16%;
+}
+table.navbar th.home, table.navbar tr.home th.subnav {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+}
+table.navbar th.home_selected, table.navbar tr.home_selected th.subnav {
+	background-color: #004980;
+	border-bottom:0;
+}
+td.navmenu div.home a:visited, td.navmenu div.home a:link {
+	font-weight:bold;
+}
+td.navmenu div.news a:visited, td.navmenu div.news a:link {
+	font-weight:bold;
+}
+td.navmenu div.about a:visited, td.navmenu div.about a:link {
+	font-weight:bold;
+}
+td.navmenu div.systems a:visited, td.navmenu div.systems a:link {
+	font-weight:bold;
+}
+td.navmenu div.nusers a:visited, td.navmenu div.nusers a:link {
+	font-weight:bold;
+}
+
+
+
+
+
+td.navmenu div.home a:hover {
+}
+table.navbar th.news {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+	white-space: nowrap;
+}
+td.navmenu div.news a:hover {
+	font-weight:bold;
+}
+table.navbar th.news, table.navbar tr.news th.subnav{
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+}
+table.navbar th.news_selected, table.navbar tr.news_selected th.subnav {
+	background-color: #418993;
+	border-bottom:0;
+}
+table.navbar th.nusers {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	margin-bottom:.25em;
+	padding-bottom:0px;
+}
+table.navbar th.nusers, table.navbar tr.nusers th.subnav {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+}
+table.navbar th.nusers_selected, table.navbar tr.nusers_selected th.subnav {
+	background-color: #004980;
+	border-bottom:0;
+}
+td.navmenu div.nusers a:hover {
+}
+td.navmenu div.projects {
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+}
+table.navbar th.projects, table.navbar tr.projects th.subnav {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+}
+table.navbar th.projects_selected, table.navbar tr.projects_selected th.subnav {
+	background-color: #004980;
+	border-bottom:0;
+}
+td.navmenu div.projects a:visited, td.navmenu div.projects a:link {
+	font-weight:bold;
+}
+td.navmenu div.projects a:hover {
+}
+td.newsbar {
+	padding:.5em;
+	color: rgb(0%,20%,50%); 
+	background-color: rgb(94%,94%,94%); 
+	vertical-align:top;
+	border-left: .5em solid white;
+	font-size: 10pt;
+	font-family: sans-serif;
+	width: 150px;
+	border-left:1px solid rgb(80%,80%,90%);
+}
+td.newsbar h4 {
+	font-family: sans-serif;
+	font-size: 11pt;
+	color: rgb(0%,30%,50%); 
+	border-top: 1pt solid gray;
+	padding-top:.25em;
+	font-weight: bold;
+}
+td.newsbar h3 {
+	font-weight: bold;
+	font-size: 12pt;
+}
+td.newsbar h2 {
+	font-family: sans-serif;
+	font-size: 14pt;
+	color: rgb(0%,30%,50%); 
+	font-weight: bold;
+}
+td.newsbar img {
+	width:150px;
+}
+td.newsbar a:link, td.newsbar a:visited {
+}
+td.newsbar p {
+	margin-top:6px;
+}
+table.navbar th.about {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+	white-space: nowrap;
+}
+td.navmenu h2 {
+	font-size: 11pt;
+}
+td.navmenu div.about a:hover {
+}
+table.navbar th.about, table.navbar tr.about th.subnav {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+}
+table.navbar th.about_selected, table.navbar tr.about_selected th.subnav {
+	background-color: #004980;
+	border-bottom:0;
+}
+
+div.home, div.about, div.news, div.projects, div.nusers {
+	width: 100%;
+	padding-right:0em;
+	margin-right:0em;
+}
+.systems {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+	white-space: nowrap;
+}
+td.navmenu div.systems a:hover {
+}
+table.navbar th.systems, table.navbar tr.systems th.subnav {
+	background-color: #004980;
+	padding-left:.2em;
+	padding-right:0em;
+	padding-bottom:0px;
+}
+table.navbar th.systems_selected, table.navbar tr.systems_selected th.subnav {
+	background-color: #004980;
+	border-bottom:0;
+}
+
+div.home, div.systems, div.news, div.projects, div.nusers {
+	width: 100%;
+	padding-right:0em;
+	margin-right:0em;
+}
